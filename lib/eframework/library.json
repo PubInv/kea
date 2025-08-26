@@ -1,0 +1,29 @@
+{
+  "name": "e-framework",
+  "version": "0.1.0",
+  "description": "Embedded framework for industrial IoT applications.",
+  "keywords": "planet, happiness, people",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/PubInv/e-framework.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Ben Coombs",
+      "email": "bencoombs@protonmail.com"
+    },
+    {
+      "name": "Rob Reid",
+      "email": "reid.robert@gmail.com"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://www.pubinv.org/",
+  "dependencies": {
+    "arduino": ">=1.8.0"
+  },
+  "frameworks": "*",
+  "platforms": "*"
+}
