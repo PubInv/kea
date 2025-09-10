@@ -15,8 +15,8 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 */
 
-#ifndef EFRAMEWORK_DEBUG_H
-#define EFRAMEWORK_DEBUG_H
+#ifndef KEA_DEBUG_H
+#define KEA_DEBUG_H
 
 #ifdef ARDUINO
 #include <Arduino.h>
@@ -46,33 +46,29 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // do something special for certain types, such as printing out
 // floating point numbers with a specific number of decimal places.
 
-namespace EFramework
+namespace Kea
 {
 
   template <class myType>
   void Debug(myType a)
   {
-#ifdef EFRAMEWORK_DEBUG
 #ifdef ARDUINO
     Serial.print(a);
     Serial.flush();
 #else
     std::cout << a;
 #endif
-#endif
   }
 
   template <class myType>
   void DebugLn(myType a)
   {
-#ifdef EFRAMEWORK_DEBUG
 #ifdef ARDUINO
     Serial.print(a);
     Serial.print("\n");
     Serial.flush();
 #else
     std::cout << a << std::endl;
-#endif
 #endif
   }
 

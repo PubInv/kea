@@ -1,12 +1,12 @@
 {
-  "name": "e-framework",
+  "name": "kea",
   "version": "0.1.0",
   "description": "Embedded framework for industrial IoT applications.",
   "keywords": "planet, happiness, people",
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/PubInv/e-framework.git"
+    "url": "https://github.com/PubInv/kea.git"
   },
   "authors":
   [

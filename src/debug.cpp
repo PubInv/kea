@@ -22,7 +22,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #include <iostream>
 #endif
 
-namespace EFramework {
+namespace Kea {
 
   void serialBegin(unsigned long baud){
     #ifdef ARDUINO
