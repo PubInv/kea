@@ -1,4 +1,4 @@
-# e-framework
+# Kea Framework
 
 Many of Public Invention's projects are based on accessible prototyping platforms such as Arduino and PlatformIO. This enables people to collaborate and interate rapidly on useful inventions.
 
