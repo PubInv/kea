@@ -24,11 +24,11 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 namespace Kea {
 
-  void serialBegin(unsigned long baud){
+  void serial_begin(unsigned long baud){
     #ifdef ARDUINO
       Serial.begin(baud);
     #else
-      std::cout << "Serial init";
+      std::cout << "Serial init\n";
     #endif
   }
 

@@ -48,9 +48,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 namespace Kea
 {
-
   template <class myType>
-  void Debug(myType a)
+  void debug(myType a)
   {
 #ifdef ARDUINO
     Serial.print(a);
@@ -61,10 +60,10 @@ namespace Kea
   }
 
   template <class myType>
-  void DebugLn(myType a)
+  void debug_ln(myType a)
   {
 #ifdef ARDUINO
-    Serial.print(a);
+    Serial.println(a);
     Serial.print("\n");
     Serial.flush();
 #else
@@ -72,7 +71,7 @@ namespace Kea
 #endif
   }
 
-  void serialBegin(unsigned long baud);
+  void serial_begin(unsigned long baud);
 }
 
-#endif
+#endif // KEA_DEBUG_H
