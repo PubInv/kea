@@ -24,7 +24,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 namespace Kea {
 
-  void serial_begin(unsigned long baud){
+  void SerialBegin(unsigned long baud){
     #ifdef ARDUINO
       Serial.begin(baud);
     #else
