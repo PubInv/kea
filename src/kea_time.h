@@ -18,8 +18,33 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #ifndef KEA_TIME_H
 #define KEA_TIME_H
 
+#include <cstdint>
+
 namespace Kea {
-    void delay_ms(unsigned long ms);
+    void DelayMs(unsigned long ms);
+    unsigned long Millis();
+
+    class Timer {
+    private:
+        uint32_t _msElapsed;
+        uint32_t _msStart;
+    public:
+        Timer(): _msElapsed(0), _msStart(0) {}
+        ~Timer() = default;
+        // Cannot copy class
+        Timer(const Timer&) = delete;
+        Timer& operator=(const Timer&) = delete;
+        // Cannot move class
+        Timer(Timer&&) = delete;
+        Timer& operator=(Timer&&) = delete;
+
+        uint32_t TimeSinceEpochMs() const;
+        void Init(uint32_t msStart);
+        void Init();
+        uint32_t Update();
+        uint32_t GetElapsed();
+        void Reset();
+    };
 }
 
 #endif // KEA_TIME_H
