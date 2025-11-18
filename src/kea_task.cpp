@@ -98,9 +98,9 @@ namespace Kea
         }
     }
 
-    void *Task::getConfig()
+    ::MachineConfig *Task::getConfig()
     {
-        return _properties.state_and_config;
+        return static_cast<::MachineConfig *>(_properties.state_and_config);
     }
 
     /*bool Task::Callback(char *message)

@@ -24,6 +24,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 #include <stdint.h>
 #endif
 
+// Forward declaration of global MachineConfig (defined in application code)
+class MachineConfig;
 
 namespace Kea {
 
@@ -95,7 +97,7 @@ class Task {
                 _properties({"noname", -1,TaskPriority::Undefined,0})
                 {};
         int DEBUG_TASK = 0;
-        void* getConfig();
+        ::MachineConfig *getConfig();
         virtual ~Task() = default;
         // Cannot copy class
         Task(const Task&) = delete;
