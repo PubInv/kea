@@ -22,7 +22,8 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://www.pubinv.org/",
   "dependencies": {
-    "arduino": ">=1.8.0"
+    "arduino": ">=1.8.0",
+    "kea_collections": ">=0.1.0"
   },
   "frameworks": "*",
   "platforms": "*"
