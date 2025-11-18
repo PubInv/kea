@@ -47,6 +47,9 @@ namespace Kea
         static void RaiseCriticalError();
         static bool _criticalError;
 
+        // make this public to allow debug to be set.
+        Scheduler _scheduler;
+
         // Core() : _state(CoreState::Undefined) {};
         // ~Core() = default;
         // // Cannot copy class
@@ -67,8 +70,7 @@ namespace Kea
         Timer _primaryTimer;
         Timer _watchdogTimer;
         CoreState _state;
-        // make this public to allow debug to be set.
-        Scheduler _scheduler;
+        
         void Tick();
         void CreateSoftwareWatchdog(uint32_t timeoutMs);
         void CreateHardwareWatchdog();
