@@ -1,6 +1,5 @@
 #include "kea_array.h"
 #include "kea_debug.h"
-#include "kea_machine.h"
 #include "kea_task.h"
 #include "kea_core.h"
 
@@ -34,6 +33,14 @@ bool PanelBlinkTask::_run()
     // }
     return true;
 }
+
+namespace Kea
+{
+class MachineConfig {
+public:
+  MachineConfig();
+};
+} // namespace Kea
 
 int main(void)
 {
